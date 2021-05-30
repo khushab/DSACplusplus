@@ -56,9 +56,44 @@ In Sample Case #4, the longest contiguous arithmetic subarray is the last six in
 #include <iostream>
 using namespace std;
 
+int longestArithmetic(int arr[], int size)
+{
+    int max = 0;
+    int i = 0;
+    int currentDiff = arr[i] - arr[i + 1];
+    int currentMax = 0;
+
+    while (arr[i])
+    {
+        currentMax = currentMax + 1;
+        if (arr[i] - arr[i + 1] == currentDiff)
+        {
+            i++;
+        }
+        else
+        {
+            if (currentMax > max)
+            {
+                max = currentMax;
+            }
+            currentMax = 0;
+            currentDiff = arr[i] - arr[i + 1];
+        }
+        if (currentMax > max)
+        {
+            max = currentMax;
+        }
+    }
+
+    return max;
+}
+
 int main()
 {
-    int arr[] = {1, 2, 3, 4, 5};
+    // int arr[] = {10, 7, 4, 6, 8, 10, 11};
+    // int arr[] = {5, 5, 4, 5, 5, 5, 4, 5, 6};
+    int arr[] = {5, 4, 3, 2, 1, 2, 3, 4, 5, 6};
 
-    cout << "hello";
+    int answer = longestArithmetic(arr, 7);
+    cout << answer;
 }
