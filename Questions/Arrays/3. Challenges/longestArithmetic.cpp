@@ -94,6 +94,6 @@ int main()
     // int arr[] = {5, 5, 4, 5, 5, 5, 4, 5, 6};
     int arr[] = {5, 4, 3, 2, 1, 2, 3, 4, 5, 6};
 
-    int answer = longestArithmetic(arr, 7);
+    int answer = longestArithmetic(arr, 10);
     cout << answer;
 }
