@@ -3,7 +3,7 @@ using namespace std;
 
 int fact(int num)
 {
-    if (num == 1)
+    if (num == 0)
     {
         return 1;
     }
