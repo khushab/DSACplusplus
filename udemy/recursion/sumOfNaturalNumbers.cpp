@@ -10,6 +10,18 @@ void sumOfNatural(int num)
         sumOfNatural(num - 1);
     }
 }
+//or
+// int sumOfNatural(int num)
+// {
+//     if (num == 0)
+//     {
+//         return 0;
+//     }
+//     else
+//     {
+//         sumOfNatural(num - 1) + num;
+//     }
+// }
 
 int main()
 {
