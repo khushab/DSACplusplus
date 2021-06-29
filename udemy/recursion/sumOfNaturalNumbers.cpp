@@ -19,7 +19,7 @@ void sumOfNatural(int num)
 //     }
 //     else
 //     {
-//         sumOfNatural(num - 1) + num;
+//         return sumOfNatural(num - 1) + num;
 //     }
 // }
 
