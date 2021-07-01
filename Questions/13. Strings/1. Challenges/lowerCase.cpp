@@ -13,4 +13,8 @@ int main()
         }
     }
     cout << str;
+
+    //inbuit function to convert to lowerCase
+    string str2 = "ALAM";
+    transform(str2.begin(), str2.end(), str2.begin(), ::tolower);
 }
