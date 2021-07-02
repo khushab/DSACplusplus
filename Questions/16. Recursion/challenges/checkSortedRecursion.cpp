@@ -7,9 +7,13 @@ int num = 0;
 
 int checkSort(int arr[], int size)
 {
-    if (size == 2)
+    if (size == 2 && arr[size - 1] > arr[size - 2])
     {
         return 1;
+    }
+    else if (size == 2 && arr[size - 1] < arr[size] - 2)
+    {
+        return 0;
     }
     else
     {
@@ -26,7 +30,7 @@ int checkSort(int arr[], int size)
 
 int main()
 {
-    int arr[] = {1, 5, 4, 6, 7};
+    int arr[] = {9, 2, 4, 6, 7};
     int size = 5;
     int result = checkSort(arr, size);
     if (result)
